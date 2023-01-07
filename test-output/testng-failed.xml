@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Reka.rest_assured_training.JsonValidationHamcrestMatchers">
+      <class name="com.Reka.rest_assured_training.ValidateJSONagainstSchema">
         <methods>
-          <include name="checkEmptyEntries"/>
+          <include name="test3"/>
         </methods>
-      </class> <!-- com.Reka.rest_assured_training.JsonValidationHamcrestMatchers -->
+      </class> <!-- com.Reka.rest_assured_training.ValidateJSONagainstSchema -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
