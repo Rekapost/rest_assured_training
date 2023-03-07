@@ -22,7 +22,11 @@ public class ValidateJSONagainstSchema {
 	 .get("/users?page=2")
 	.then()
 	 .assertThat()
-	 .body(matchesJsonSchemaInClasspath("/rest_assured_training/target/schema.json"))	       //***	
+	 .body(matchesJsonSchemaInClasspath("schema.json"))	      //***	 
 	 .statusCode(200);	 
 	}
 }
+
+//.body(matchesJsonSchemaInClasspath("C://Users//Reka//eclipse-workspace//rest_assured_training//target//classes//schema.json")) 	   
+//.body(matchesJsonSchemaInClasspath("schema.json"))
+//.body(matchesJsonSchemaInClasspath("src/test/resources/schema.json"))

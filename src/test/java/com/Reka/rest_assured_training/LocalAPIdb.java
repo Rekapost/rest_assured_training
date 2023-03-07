@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class LocalAPIdb {
 	
-	//@Test
+	//@Test    //run 1 by 1 
 	public void getRequest() {
 		baseURI="http://localhost:3000";
 		given()
@@ -66,20 +66,53 @@ public class LocalAPIdb {
 		.when()
 			.patch("/users/4")                 //
 		.then()
-			.statusCode(200);	
-		
-		
-		
+			.statusCode(200);				
 	}
-	@Test
+	
+	//@Test
 	public void deleteRequest() {
 		baseURI="http://localhost:3000";     
 		when()
 			//.delete("/users/4")
 			//.delete("/users/5")
-			.delete("/users/6")
+			.delete("/users/4")
 		.then()
 			.statusCode(200);
 			//.statusCode(204); 
 	}
+}  
+//json-server --watch db.json
+/*
+ * {
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Reka",
+      "lastName": "NV",
+      "subjectId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Raja",
+      "lastName": "NV",
+      "subjectId": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Vasan",
+      "lastName": "NV",
+      "subjectId": 1
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Automation"
+    },
+    {
+      "id": 2,
+      "name": "selenium"
+    }
+  ]
 }
+ */
